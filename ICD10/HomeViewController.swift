@@ -63,24 +63,6 @@ class HomeViewController: ListViewController, UISearchBarDelegate, UISearchDispl
         var icdCode = rowData as ICDCode;
         cell.icdCode.text = icdCode.icdCdId;
         cell.icdText.text = icdCode.icdCdText;
-//        
-//        var cell = tableCell as TaskyItemTableViewCell;
-//        var taskyModel = rowData as TaskyModel;
-//        
-//        cell.taskyItemStatus.text  = "Yesterday";
-//        if(indexPath.row == 2){
-//            cell.taskyItemStatus.text  = "Today";
-//        }
-//        if(indexPath.row == 3){
-//            cell.taskyItemStatus.text  = "2 Days";
-//        }
-//        if(indexPath.row == 4){
-//            cell.taskyItemStatus.text  = "39 Days";
-//            cell.taskyItemStatus.textColor = UIColor(red: 0.5, green: 0.2, blue: 0.2, alpha: 1.0);
-//        }
-//        cell.taskyPriority.text = TaskyPriorities.priorityName(taskyModel.taskyPriority!);
-//        cell.dataBind(taskyModel, isEnabled: canUserInteract);
-//        cell.taskyItemTitle.textColor = UIColor.blackColor();
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar){
@@ -98,7 +80,8 @@ class HomeViewController: ListViewController, UISearchBarDelegate, UISearchDispl
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder();
-        var result = ICDCode.mock();
+        var result = ICDCode.mock(searchBar.text);
+
         self.dataContext = result;
         self.tableView.reloadData();
         self.navigationController?.setNavigationBarHidden(false, animated: true);

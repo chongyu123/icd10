@@ -53,5 +53,13 @@ public class ICDCode : NSObject{
         return icdCodes;
     }
     
+    class func mock(searchBy: NSString) -> [AnyObject]{
+        var filter = NSPredicate(format: "(self.icdCdText contains[c] %@)", searchBy);
+        var mocks = self.mock();
+        var mutable = NSMutableArray(array: mocks);
+        return mutable.filteredArrayUsingPredicate(filter!);
+    }
+    
+    
 
 }
