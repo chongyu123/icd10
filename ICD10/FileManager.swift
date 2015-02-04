@@ -24,6 +24,7 @@ public class FileManager{
     }
     
     class func readTextFile(fileName: String, callback: (fileContent: String!) -> Void){
+        println(fileName);
         var result = readTextFile(fileName);
         callback(fileContent:result);
         

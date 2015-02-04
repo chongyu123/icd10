@@ -12,7 +12,7 @@ public class TaskOrchestrator: NSOperationQueue{
 
     override init(){
         var parser:ICDCodeDownloader = ICDCodeDownloader();
-        parser.qualityOfService = .Background;
+//        parser.qualityOfService = .Background;
 //        parser.addDependency(ICDCodeParser());
 
         NSOperationQueue.mainQueue().addOperation(parser);
