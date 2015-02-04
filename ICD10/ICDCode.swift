@@ -7,12 +7,21 @@
 //
 
 import Foundation
+import UIKit;
+import CoreData;
 
 public class ICDCode : NSObject{
-    var icdCdId: NSString?;
-    var icdCdText: NSString?;
-    var icdCdDesc: NSString?;
- 
+    var icdCdId: NSString;
+    var icdCdText: NSString;
+    var icdCdDesc: NSString;
+    let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+    
+    
+    //    var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+    //    userEntity.userName = "helloUser";
+    //    userEntity.password = "123456";
+    //    appDelegate.dbContext.saveContext(appDelegate.dbContext.backgroundContext!);
+    
     
     
     init(icdCdId:NSString, icdCdText: NSString, icdCdDesc: NSString){
@@ -26,9 +35,6 @@ public class ICDCode : NSObject{
         
         var icd:ICDCode = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
         icdCodes.append(icd);
-
-        icd = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
-        icdCodes.append(icd);
         
         icd = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
         icdCodes.append(icd);
@@ -44,12 +50,15 @@ public class ICDCode : NSObject{
         
         icd = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
         icdCodes.append(icd);
+        
+        icd = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
+        icdCodes.append(icd);
         icd = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
         icdCodes.append(icd);
         
         icd = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
         icdCodes.append(icd);
-
+        
         return icdCodes;
     }
     
@@ -61,5 +70,13 @@ public class ICDCode : NSObject{
     }
     
     
-
+    func save()->Void{
+//        var icdORM:ICDCodeEntity = NSEntityDescription.insertNewObjectForEntityForName("IcdCode", inManagedObjectContext: appDelegate.dbContext.backgroundContext!) as ICDCodeEntity;
+//        icdORM.icdCodeId = self.icdCdId;
+//        icdORM.longDesc = self.icdCdDesc;
+//        icdORM.shortDesc = self.icdCdText;
+//        appDelegate.dbContext.saveContext(appDelegate.dbContext.backgroundContext!);
+        
+    }
+    
 }
