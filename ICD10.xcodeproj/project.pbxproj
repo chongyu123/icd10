@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90EB88451A81E14B0081403A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88441A81E14B0081403A /* AppDelegate.swift */; };
+		90EB88481A81E14B0081403A /* ICD10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88461A81E14B0081403A /* ICD10.xcdatamodeld */; };
+		90EB884A1A81E14B0081403A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88491A81E14B0081403A /* ViewController.swift */; };
+		90EB884D1A81E14B0081403A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EB884B1A81E14B0081403A /* Main.storyboard */; };
+		90EB884F1A81E14B0081403A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90EB884E1A81E14B0081403A /* Images.xcassets */; };
+		90EB88521A81E14B0081403A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90EB88501A81E14B0081403A /* LaunchScreen.xib */; };
+		90EB885E1A81E14B0081403A /* ICD10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB885D1A81E14B0081403A /* ICD10Tests.swift */; };
+		90EB886C1A81E1F90081403A /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB886B1A81E1F90081403A /* ListViewProtocol.swift */; };
+		90EB886E1A81E2210081403A /* DetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB886D1A81E2210081403A /* DetailViewProtocol.swift */; };
+		90EB88701A81E2390081403A /* SearchBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB886F1A81E2390081403A /* SearchBarProtocol.swift */; };
+		90EB88721A81E24F0081403A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88711A81E24F0081403A /* MainViewController.swift */; };
+		90EB88741A81E2670081403A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88731A81E2670081403A /* HomeViewController.swift */; };
+		90EB88771A81E28E0081403A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88761A81E28E0081403A /* ListViewController.swift */; };
+		90EB887B1A81E2CA0081403A /* FilteredListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB887A1A81E2CA0081403A /* FilteredListViewController.swift */; };
+		90EB887E1A81E3180081403A /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB887D1A81E3180081403A /* ItemCell.swift */; };
+		90EB88811A81E3740081403A /* ICDCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88801A81E3740081403A /* ICDCode.swift */; };
+		90EB88831A81E43E0081403A /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88821A81E43E0081403A /* BaseModel.swift */; };
+		90EB88851A81E6980081403A /* ChangeObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88841A81E6980081403A /* ChangeObserverProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90EB88581A81E14B0081403A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90EB88371A81E14B0081403A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90EB883E1A81E14B0081403A;
+			remoteInfo = ICD10;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		90EB883F1A81E14B0081403A /* ICD10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICD10.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90EB88431A81E14B0081403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90EB88441A81E14B0081403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90EB88471A81E14B0081403A /* ICD10.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ICD10.xcdatamodel; sourceTree = "<group>"; };
+		90EB88491A81E14B0081403A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90EB884C1A81E14B0081403A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90EB884E1A81E14B0081403A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		90EB88511A81E14B0081403A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		90EB88571A81E14B0081403A /* ICD10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICD10Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90EB885C1A81E14B0081403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90EB885D1A81E14B0081403A /* ICD10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICD10Tests.swift; sourceTree = "<group>"; };
+		90EB886B1A81E1F90081403A /* ListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
+		90EB886D1A81E2210081403A /* DetailViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewProtocol.swift; sourceTree = "<group>"; };
+		90EB886F1A81E2390081403A /* SearchBarProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarProtocol.swift; sourceTree = "<group>"; };
+		90EB88711A81E24F0081403A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		90EB88731A81E2670081403A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		90EB88761A81E28E0081403A /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		90EB887A1A81E2CA0081403A /* FilteredListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredListViewController.swift; sourceTree = "<group>"; };
+		90EB887D1A81E3180081403A /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		90EB88801A81E3740081403A /* ICDCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCode.swift; sourceTree = "<group>"; };
+		90EB88821A81E43E0081403A /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		90EB88841A81E6980081403A /* ChangeObserverProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeObserverProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90EB883C1A81E14B0081403A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90EB88541A81E14B0081403A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90EB88361A81E14B0081403A = {
+			isa = PBXGroup;
+			children = (
+				90EB88411A81E14B0081403A /* ICD10 */,
+				90EB885A1A81E14B0081403A /* ICD10Tests */,
+				90EB88401A81E14B0081403A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90EB88401A81E14B0081403A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90EB883F1A81E14B0081403A /* ICD10.app */,
+				90EB88571A81E14B0081403A /* ICD10Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90EB88411A81E14B0081403A /* ICD10 */ = {
+			isa = PBXGroup;
+			children = (
+				90EB886A1A81E1C50081403A /* Models */,
+				90EB88691A81E1C10081403A /* Views */,
+				90EB88681A81E1B00081403A /* Controllers */,
+				90EB88671A81E18C0081403A /* Protocols */,
+				90EB88441A81E14B0081403A /* AppDelegate.swift */,
+				90EB88491A81E14B0081403A /* ViewController.swift */,
+				90EB884B1A81E14B0081403A /* Main.storyboard */,
+				90EB884E1A81E14B0081403A /* Images.xcassets */,
+				90EB88501A81E14B0081403A /* LaunchScreen.xib */,
+				90EB88461A81E14B0081403A /* ICD10.xcdatamodeld */,
+				90EB88421A81E14B0081403A /* Supporting Files */,
+			);
+			path = ICD10;
+			sourceTree = "<group>";
+		};
+		90EB88421A81E14B0081403A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90EB88431A81E14B0081403A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90EB885A1A81E14B0081403A /* ICD10Tests */ = {
+			isa = PBXGroup;
+			children = (
+				90EB885D1A81E14B0081403A /* ICD10Tests.swift */,
+				90EB885B1A81E14B0081403A /* Supporting Files */,
+			);
+			path = ICD10Tests;
+			sourceTree = "<group>";
+		};
+		90EB885B1A81E14B0081403A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90EB885C1A81E14B0081403A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90EB88671A81E18C0081403A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				90EB886B1A81E1F90081403A /* ListViewProtocol.swift */,
+				90EB886D1A81E2210081403A /* DetailViewProtocol.swift */,
+				90EB886F1A81E2390081403A /* SearchBarProtocol.swift */,
+				90EB88841A81E6980081403A /* ChangeObserverProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		90EB88681A81E1B00081403A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				90EB88751A81E2820081403A /* Base */,
+				90EB88731A81E2670081403A /* HomeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		90EB88691A81E1C10081403A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				90EB887C1A81E2F60081403A /* ICD10 */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		90EB886A1A81E1C50081403A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90EB88801A81E3740081403A /* ICDCode.swift */,
+				90EB88821A81E43E0081403A /* BaseModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		90EB88751A81E2820081403A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				90EB88711A81E24F0081403A /* MainViewController.swift */,
+				90EB88761A81E28E0081403A /* ListViewController.swift */,
+				90EB887A1A81E2CA0081403A /* FilteredListViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		90EB887C1A81E2F60081403A /* ICD10 */ = {
+			isa = PBXGroup;
+			children = (
+				90EB887D1A81E3180081403A /* ItemCell.swift */,
+			);
+			name = ICD10;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90EB883E1A81E14B0081403A /* ICD10 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90EB88611A81E14B0081403A /* Build configuration list for PBXNativeTarget "ICD10" */;
+			buildPhases = (
+				90EB883B1A81E14B0081403A /* Sources */,
+				90EB883C1A81E14B0081403A /* Frameworks */,
+				90EB883D1A81E14B0081403A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ICD10;
+			productName = ICD10;
+			productReference = 90EB883F1A81E14B0081403A /* ICD10.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90EB88561A81E14B0081403A /* ICD10Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90EB88641A81E14B0081403A /* Build configuration list for PBXNativeTarget "ICD10Tests" */;
+			buildPhases = (
+				90EB88531A81E14B0081403A /* Sources */,
+				90EB88541A81E14B0081403A /* Frameworks */,
+				90EB88551A81E14B0081403A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90EB88591A81E14B0081403A /* PBXTargetDependency */,
+			);
+			name = ICD10Tests;
+			productName = ICD10Tests;
+			productReference = 90EB88571A81E14B0081403A /* ICD10Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90EB88371A81E14B0081403A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GoliaMania;
+				TargetAttributes = {
+					90EB883E1A81E14B0081403A = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					90EB88561A81E14B0081403A = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 90EB883E1A81E14B0081403A;
+					};
+				};
+			};
+			buildConfigurationList = 90EB883A1A81E14B0081403A /* Build configuration list for PBXProject "ICD10" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90EB88361A81E14B0081403A;
+			productRefGroup = 90EB88401A81E14B0081403A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90EB883E1A81E14B0081403A /* ICD10 */,
+				90EB88561A81E14B0081403A /* ICD10Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90EB883D1A81E14B0081403A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90EB884D1A81E14B0081403A /* Main.storyboard in Resources */,
+				90EB88521A81E14B0081403A /* LaunchScreen.xib in Resources */,
+				90EB884F1A81E14B0081403A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90EB88551A81E14B0081403A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90EB883B1A81E14B0081403A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90EB88851A81E6980081403A /* ChangeObserverProtocol.swift in Sources */,
+				90EB88721A81E24F0081403A /* MainViewController.swift in Sources */,
+				90EB884A1A81E14B0081403A /* ViewController.swift in Sources */,
+				90EB88831A81E43E0081403A /* BaseModel.swift in Sources */,
+				90EB88701A81E2390081403A /* SearchBarProtocol.swift in Sources */,
+				90EB88811A81E3740081403A /* ICDCode.swift in Sources */,
+				90EB88741A81E2670081403A /* HomeViewController.swift in Sources */,
+				90EB88451A81E14B0081403A /* AppDelegate.swift in Sources */,
+				90EB88771A81E28E0081403A /* ListViewController.swift in Sources */,
+				90EB886C1A81E1F90081403A /* ListViewProtocol.swift in Sources */,
+				90EB887E1A81E3180081403A /* ItemCell.swift in Sources */,
+				90EB88481A81E14B0081403A /* ICD10.xcdatamodeld in Sources */,
+				90EB886E1A81E2210081403A /* DetailViewProtocol.swift in Sources */,
+				90EB887B1A81E2CA0081403A /* FilteredListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90EB88531A81E14B0081403A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90EB885E1A81E14B0081403A /* ICD10Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90EB88591A81E14B0081403A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90EB883E1A81E14B0081403A /* ICD10 */;
+			targetProxy = 90EB88581A81E14B0081403A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90EB884B1A81E14B0081403A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90EB884C1A81E14B0081403A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90EB88501A81E14B0081403A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90EB88511A81E14B0081403A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90EB885F1A81E14B0081403A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90EB88601A81E14B0081403A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90EB88621A81E14B0081403A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ICD10/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		90EB88631A81E14B0081403A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ICD10/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		90EB88651A81E14B0081403A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ICD10Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICD10.app/ICD10";
+			};
+			name = Debug;
+		};
+		90EB88661A81E14B0081403A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ICD10Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICD10.app/ICD10";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90EB883A1A81E14B0081403A /* Build configuration list for PBXProject "ICD10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90EB885F1A81E14B0081403A /* Debug */,
+				90EB88601A81E14B0081403A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90EB88611A81E14B0081403A /* Build configuration list for PBXNativeTarget "ICD10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90EB88621A81E14B0081403A /* Debug */,
+				90EB88631A81E14B0081403A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		90EB88641A81E14B0081403A /* Build configuration list for PBXNativeTarget "ICD10Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90EB88651A81E14B0081403A /* Debug */,
+				90EB88661A81E14B0081403A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		90EB88461A81E14B0081403A /* ICD10.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90EB88471A81E14B0081403A /* ICD10.xcdatamodel */,
+			);
+			currentVersion = 90EB88471A81E14B0081403A /* ICD10.xcdatamodel */;
+			path = ICD10.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 90EB88371A81E14B0081403A /* Project object */;
+}
