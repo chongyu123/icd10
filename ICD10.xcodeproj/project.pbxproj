@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90927DFF1A81F6E7002291CC /* ICDCodeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927DFE1A81F6E7002291CC /* ICDCodeParser.swift */; };
+		90927E021A81F72A002291CC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E011A81F72A002291CC /* FileManager.swift */; };
+		90927E041A81F86F002291CC /* TaskOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E031A81F86F002291CC /* TaskOrchestrator.swift */; };
+		90927E061A81FDAE002291CC /* ICDCodeDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E051A81FDAE002291CC /* ICDCodeDownloader.swift */; };
+		90927E091A827470002291CC /* AppDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E081A827470002291CC /* AppDataContext.swift */; };
 		90EB88451A81E14B0081403A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88441A81E14B0081403A /* AppDelegate.swift */; };
 		90EB88481A81E14B0081403A /* ICD10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88461A81E14B0081403A /* ICD10.xcdatamodeld */; };
 		90EB884A1A81E14B0081403A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88491A81E14B0081403A /* ViewController.swift */; };
@@ -25,6 +30,7 @@
 		90EB88811A81E3740081403A /* ICDCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88801A81E3740081403A /* ICDCode.swift */; };
 		90EB88831A81E43E0081403A /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88821A81E43E0081403A /* BaseModel.swift */; };
 		90EB88851A81E6980081403A /* ChangeObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88841A81E6980081403A /* ChangeObserverProtocol.swift */; };
+		90EB88891A81F0E50081403A /* icd-codes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 90EB88881A81F0E50081403A /* icd-codes.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90927DFE1A81F6E7002291CC /* ICDCodeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCodeParser.swift; sourceTree = "<group>"; };
+		90927E011A81F72A002291CC /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		90927E031A81F86F002291CC /* TaskOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskOrchestrator.swift; sourceTree = "<group>"; };
+		90927E051A81FDAE002291CC /* ICDCodeDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCodeDownloader.swift; sourceTree = "<group>"; };
+		90927E081A827470002291CC /* AppDataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataContext.swift; sourceTree = "<group>"; };
 		90EB883F1A81E14B0081403A /* ICD10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICD10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90EB88431A81E14B0081403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90EB88441A81E14B0081403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +71,7 @@
 		90EB88801A81E3740081403A /* ICDCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCode.swift; sourceTree = "<group>"; };
 		90EB88821A81E43E0081403A /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		90EB88841A81E6980081403A /* ChangeObserverProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeObserverProtocol.swift; sourceTree = "<group>"; };
+		90EB88881A81F0E50081403A /* icd-codes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "icd-codes.txt"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90927E001A81F71E002291CC /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				90927E011A81F72A002291CC /* FileManager.swift */,
+			);
+			name = FileManager;
+			sourceTree = "<group>";
+		};
+		90927E071A827461002291CC /* DataContext */ = {
+			isa = PBXGroup;
+			children = (
+				90927E081A827470002291CC /* AppDataContext.swift */,
+			);
+			name = DataContext;
+			sourceTree = "<group>";
+		};
 		90EB88361A81E14B0081403A = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +129,10 @@
 		90EB88411A81E14B0081403A /* ICD10 */ = {
 			isa = PBXGroup;
 			children = (
+				90927E071A827461002291CC /* DataContext */,
+				90927E001A81F71E002291CC /* FileManager */,
+				90EB888A1A81F38F0081403A /* AppTasks */,
+				90EB88881A81F0E50081403A /* icd-codes.txt */,
 				90EB886A1A81E1C50081403A /* Models */,
 				90EB88691A81E1C10081403A /* Views */,
 				90EB88681A81E1B00081403A /* Controllers */,
@@ -196,6 +228,16 @@
 			name = ICD10;
 			sourceTree = "<group>";
 		};
+		90EB888A1A81F38F0081403A /* AppTasks */ = {
+			isa = PBXGroup;
+			children = (
+				90927DFE1A81F6E7002291CC /* ICDCodeParser.swift */,
+				90927E031A81F86F002291CC /* TaskOrchestrator.swift */,
+				90927E051A81FDAE002291CC /* ICDCodeDownloader.swift */,
+			);
+			name = AppTasks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,6 +320,7 @@
 			files = (
 				90EB884D1A81E14B0081403A /* Main.storyboard in Resources */,
 				90EB88521A81E14B0081403A /* LaunchScreen.xib in Resources */,
+				90EB88891A81F0E50081403A /* icd-codes.txt in Resources */,
 				90EB884F1A81E14B0081403A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,8 +345,13 @@
 				90EB88831A81E43E0081403A /* BaseModel.swift in Sources */,
 				90EB88701A81E2390081403A /* SearchBarProtocol.swift in Sources */,
 				90EB88811A81E3740081403A /* ICDCode.swift in Sources */,
+				90927E041A81F86F002291CC /* TaskOrchestrator.swift in Sources */,
+				90927DFF1A81F6E7002291CC /* ICDCodeParser.swift in Sources */,
+				90927E021A81F72A002291CC /* FileManager.swift in Sources */,
 				90EB88741A81E2670081403A /* HomeViewController.swift in Sources */,
+				90927E061A81FDAE002291CC /* ICDCodeDownloader.swift in Sources */,
 				90EB88451A81E14B0081403A /* AppDelegate.swift in Sources */,
+				90927E091A827470002291CC /* AppDataContext.swift in Sources */,
 				90EB88771A81E28E0081403A /* ListViewController.swift in Sources */,
 				90EB886C1A81E1F90081403A /* ListViewProtocol.swift in Sources */,
 				90EB887E1A81E3180081403A /* ItemCell.swift in Sources */,
@@ -503,6 +551,7 @@
 				90EB88631A81E14B0081403A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90EB88641A81E14B0081403A /* Build configuration list for PBXNativeTarget "ICD10Tests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +560,7 @@
 				90EB88661A81E14B0081403A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

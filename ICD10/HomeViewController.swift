@@ -31,6 +31,18 @@ class HomeViewController: ListViewController, UISearchBarDelegate, UISearchDispl
         self.dataContext = icdCodes;
         filterSearch.delegate=self;
         
+//        readFile("icd-codes", fileType:"txt");
+        let operation : NSOperation = NSOperation()
+        operation.start();
+        operation.completionBlock = {
+            println("Completed")
+        }
+        
+    }
+    
+    func readFile(fileName: String, fileType: String) -> String{
+        var fileRoot = NSBundle.mainBundle().pathForResource(fileName, ofType: fileType)
+        return String(contentsOfFile: fileRoot!, encoding: NSUTF8StringEncoding, error: nil)!;
     }
     
     
