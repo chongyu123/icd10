@@ -97,6 +97,12 @@ class ListViewController: MainViewController,UITableViewDelegate, UITableViewDat
         self.tableView.reloadData();
     }
     
+    
+    func refreshList(data: [AnyObject]) -> Void{
+        self.dataContext = data;
+        self.tableView.reloadData();
+    }
+    
     private func addRefresh()->Void{
         var refreshButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: Selector("onRefresh"));
         self.navigationItem.setLeftBarButtonItem(refreshButton, animated: true);

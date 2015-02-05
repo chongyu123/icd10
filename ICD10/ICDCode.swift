@@ -16,7 +16,6 @@ public class ICDCode : NSObject{
     var icdCdDesc: NSString;
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
     
-    
     //    var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
     //    userEntity.userName = "helloUser";
     //    userEntity.password = "123456";
@@ -58,8 +57,16 @@ public class ICDCode : NSObject{
         
         icd = ICDCode(icdCdId: "00001", icdCdText: "Cholera",icdCdDesc: "Cholera");
         icdCodes.append(icd);
-        
-        return icdCodes;
+        var result = queryICDCodes(100);
+        println("Result \(result.count)");
+        var cnt=0;
+        for icdEntity in ICDCodeDataStore.instance.data {
+            if(cnt==0){
+                println("Result Is : \(icdEntity as ICDCode)");
+            }
+            cnt++;
+        }
+        return ICDCodeDataStore.instance.data;
     }
     
     class func mock(searchBy: NSString) -> [AnyObject]{
@@ -71,12 +78,34 @@ public class ICDCode : NSObject{
     
     
     func save()->Void{
-//        var icdORM:ICDCodeEntity = NSEntityDescription.insertNewObjectForEntityForName("IcdCode", inManagedObjectContext: appDelegate.dbContext.backgroundContext!) as ICDCodeEntity;
+        ICDCodeDataStore.instance.save(self);
+//        var icdORM:ICDCodeEntity = NSEntityDescription.insertNewObjectForEntityForName("ICDCodeEntity", inManagedObjectContext: appDelegate.dbContext.backgroundContext!) as ICDCodeEntity;
 //        icdORM.icdCodeId = self.icdCdId;
 //        icdORM.longDesc = self.icdCdDesc;
 //        icdORM.shortDesc = self.icdCdText;
+//        icdORM.isHeader = "YES";
 //        appDelegate.dbContext.saveContext(appDelegate.dbContext.backgroundContext!);
         
+    }
+    
+    class func isExists() -> Bool{
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        var fetchReq: NSFetchRequest = NSFetchRequest(entityName: "ICDCodeEntity");
+        fetchReq.fetchLimit = 1;
+        var result = appDelegate.dbContext.managedObjectContext!.executeFetchRequest(fetchReq, error:nil);
+        var exists = result?.count > 0 ? true : false;
+        return exists;
+    }
+    
+    class func queryICDCodes(fetchLimit: Int) -> [AnyObject]{
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        var fetchReq: NSFetchRequest = NSFetchRequest(entityName: "ICDCodeEntity");
+        fetchReq.returnsObjectsAsFaults=false;
+        fetchReq.shouldRefreshRefetchedObjects=true;
+        fetchReq.fetchLimit = fetchLimit;
+        var result = appDelegate.dbContext.managedObjectContext!.executeFetchRequest(fetchReq, error:nil);
+        println(result);
+        return result!;
     }
     
 }

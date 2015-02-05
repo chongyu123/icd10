@@ -25,17 +25,20 @@ class HomeViewController: ListViewController, UISearchBarDelegate, UISearchDispl
     
     
     override func viewDidLoad() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onProcessComplete", name: NotificationKeys.PROCESS_COMPLETE, object: nil);
+
         super.viewDidLoad();
         self.tableView = icdList;
         self.prepareTableView("icdCode");
         self.dataContext = icdCodes;
         filterSearch.delegate=self;
-        
+        var orchestration = TaskOrchestrator();
+
 //        readFile("icd-codes", fileType:"txt");
         let operation : NSOperation = NSOperation()
         operation.start();
         operation.completionBlock = {
-            println("Completed")
+
         }
         
     }
@@ -115,4 +118,8 @@ class HomeViewController: ListViewController, UISearchBarDelegate, UISearchDispl
         searchBar.setShowsCancelButton(false, animated: true);
     }
     
+    func onProcessComplete()->Void{
+        println("Length is \(ICDCodeDataStore.instance.data.count) ");
+        self.refreshList(ICDCodeDataStore.instance.data);
+    }
 }

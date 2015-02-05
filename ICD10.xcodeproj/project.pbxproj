@@ -11,11 +11,12 @@
 		90927E021A81F72A002291CC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E011A81F72A002291CC /* FileManager.swift */; };
 		90927E041A81F86F002291CC /* TaskOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E031A81F86F002291CC /* TaskOrchestrator.swift */; };
 		90927E061A81FDAE002291CC /* ICDCodeDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E051A81FDAE002291CC /* ICDCodeDownloader.swift */; };
-		90927E091A827470002291CC /* AppDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E081A827470002291CC /* AppDataContext.swift */; };
 		90927E0B1A827FF4002291CC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E0A1A827FF4002291CC /* DataStore.swift */; };
 		90927E0D1A828005002291CC /* DBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E0C1A828005002291CC /* DBConstants.swift */; };
 		90927E111A828024002291CC /* DBContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E101A828024002291CC /* DBContext.swift */; };
-		90927E151A828116002291CC /* ICDCodeORM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90927E141A828116002291CC /* ICDCodeORM.swift */; };
+		90ABA3441A833F2B004A98C0 /* ICDCodeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA3431A833F2B004A98C0 /* ICDCodeDataStore.swift */; };
+		90ABA3471A834336004A98C0 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ABA3461A834336004A98C0 /* NotificationKeys.swift */; };
+		90CBC8091A83255C0068E750 /* ICDCodeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CBC8081A83255C0068E750 /* ICDCodeEntity.swift */; };
 		90EB88451A81E14B0081403A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88441A81E14B0081403A /* AppDelegate.swift */; };
 		90EB88481A81E14B0081403A /* ICD10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88461A81E14B0081403A /* ICD10.xcdatamodeld */; };
 		90EB884A1A81E14B0081403A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EB88491A81E14B0081403A /* ViewController.swift */; };
@@ -52,11 +53,12 @@
 		90927E011A81F72A002291CC /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		90927E031A81F86F002291CC /* TaskOrchestrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskOrchestrator.swift; sourceTree = "<group>"; };
 		90927E051A81FDAE002291CC /* ICDCodeDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCodeDownloader.swift; sourceTree = "<group>"; };
-		90927E081A827470002291CC /* AppDataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataContext.swift; sourceTree = "<group>"; };
 		90927E0A1A827FF4002291CC /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		90927E0C1A828005002291CC /* DBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBConstants.swift; sourceTree = "<group>"; };
 		90927E101A828024002291CC /* DBContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBContext.swift; sourceTree = "<group>"; };
-		90927E141A828116002291CC /* ICDCodeORM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCodeORM.swift; sourceTree = "<group>"; };
+		90ABA3431A833F2B004A98C0 /* ICDCodeDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCodeDataStore.swift; sourceTree = "<group>"; };
+		90ABA3461A834336004A98C0 /* NotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
+		90CBC8081A83255C0068E750 /* ICDCodeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDCodeEntity.swift; sourceTree = "<group>"; };
 		90EB883F1A81E14B0081403A /* ICD10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICD10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90EB88431A81E14B0081403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90EB88441A81E14B0081403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,10 +113,10 @@
 		90927E071A827461002291CC /* DataContext */ = {
 			isa = PBXGroup;
 			children = (
-				90927E081A827470002291CC /* AppDataContext.swift */,
 				90927E0A1A827FF4002291CC /* DataStore.swift */,
 				90927E0C1A828005002291CC /* DBConstants.swift */,
 				90927E101A828024002291CC /* DBContext.swift */,
+				90ABA3431A833F2B004A98C0 /* ICDCodeDataStore.swift */,
 			);
 			name = DataContext;
 			sourceTree = "<group>";
@@ -122,9 +124,17 @@
 		90927E131A8280FD002291CC /* ORM */ = {
 			isa = PBXGroup;
 			children = (
-				90927E141A828116002291CC /* ICDCodeORM.swift */,
+				90CBC8081A83255C0068E750 /* ICDCodeEntity.swift */,
 			);
 			name = ORM;
+			sourceTree = "<group>";
+		};
+		90ABA3451A834321004A98C0 /* NotificationConstants */ = {
+			isa = PBXGroup;
+			children = (
+				90ABA3461A834336004A98C0 /* NotificationKeys.swift */,
+			);
+			name = NotificationConstants;
 			sourceTree = "<group>";
 		};
 		90EB88361A81E14B0081403A = {
@@ -148,6 +158,7 @@
 		90EB88411A81E14B0081403A /* ICD10 */ = {
 			isa = PBXGroup;
 			children = (
+				90ABA3451A834321004A98C0 /* NotificationConstants */,
 				90927E131A8280FD002291CC /* ORM */,
 				90927E071A827461002291CC /* DataContext */,
 				90927E001A81F71E002291CC /* FileManager */,
@@ -362,6 +373,7 @@
 				90EB88851A81E6980081403A /* ChangeObserverProtocol.swift in Sources */,
 				90EB88721A81E24F0081403A /* MainViewController.swift in Sources */,
 				90927E0D1A828005002291CC /* DBConstants.swift in Sources */,
+				90ABA3441A833F2B004A98C0 /* ICDCodeDataStore.swift in Sources */,
 				90EB884A1A81E14B0081403A /* ViewController.swift in Sources */,
 				90EB88831A81E43E0081403A /* BaseModel.swift in Sources */,
 				90EB88701A81E2390081403A /* SearchBarProtocol.swift in Sources */,
@@ -370,15 +382,15 @@
 				90927DFF1A81F6E7002291CC /* ICDCodeParser.swift in Sources */,
 				90927E111A828024002291CC /* DBContext.swift in Sources */,
 				90927E021A81F72A002291CC /* FileManager.swift in Sources */,
+				90ABA3471A834336004A98C0 /* NotificationKeys.swift in Sources */,
 				90EB88741A81E2670081403A /* HomeViewController.swift in Sources */,
 				90927E061A81FDAE002291CC /* ICDCodeDownloader.swift in Sources */,
 				90EB88451A81E14B0081403A /* AppDelegate.swift in Sources */,
-				90927E091A827470002291CC /* AppDataContext.swift in Sources */,
+				90CBC8091A83255C0068E750 /* ICDCodeEntity.swift in Sources */,
 				90927E0B1A827FF4002291CC /* DataStore.swift in Sources */,
 				90EB88771A81E28E0081403A /* ListViewController.swift in Sources */,
 				90EB886C1A81E1F90081403A /* ListViewProtocol.swift in Sources */,
 				90EB887E1A81E3180081403A /* ItemCell.swift in Sources */,
-				90927E151A828116002291CC /* ICDCodeORM.swift in Sources */,
 				90EB88481A81E14B0081403A /* ICD10.xcdatamodeld in Sources */,
 				90EB886E1A81E2210081403A /* DetailViewProtocol.swift in Sources */,
 				90EB887B1A81E2CA0081403A /* FilteredListViewController.swift in Sources */,
