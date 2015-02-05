@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="IcdCode" syncable="YES">
+    <entity name="ICDCodeEntity" representedClassName="ICDCodeEntity" syncable="YES">
         <attribute name="icdCodeId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isHeader" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isHeader" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longDesc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="IcdCode" positionX="-45" positionY="0" width="128" height="120"/>
+        <element name="ICDCodeEntity" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

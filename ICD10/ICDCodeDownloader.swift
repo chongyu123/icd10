@@ -23,15 +23,21 @@ public class ICDCodeDownloader:  NSOperation{
         if self.cancelled {
             return
         }
-        FileManager.readTextFile(dataFile, callback: { (fileContent) -> Void in
-            
-            println("read File");
-            var parser:ICDCodeParser = ICDCodeParser(rawData:fileContent);
-            parser.start();
-        })
-        println("Started ");
+        if(!ICDCode.isExists()){
+            FileManager.readTextFile(dataFile, callback: { (fileContent) -> Void in
+                
+                println("read File");
+                var parser:ICDCodeParser = ICDCodeParser(rawData:fileContent);
+                parser.start();
+            })
+            println("Started ");
+        }else{
+            println("Contains");
+            self.cancel();
+        }
+        
     }
     
     
-
+    
 }

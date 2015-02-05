@@ -14,6 +14,8 @@ public class ICDCodeParser: NSOperation{
     let icdCodeRange = NSRange(location: 6, length: 12);
     let shortDescRange = NSRange(location: 16, length: 75);
     var longDescRange = NSRange(location: 77, length: 376);
+
+    
     override init(){
         super.init();
         self.completionBlock = {
@@ -45,40 +47,36 @@ public class ICDCodeParser: NSOperation{
         var icdCdText:NSString!;
         var icdCdDesc:NSString!;
         var icdRow:NSString!;
+        var cnt=0;
         for row in rows{
             icdRow = row as NSString;
             if(icdRow.length>0){
+                cnt++;
                 icdCdId = icdCodeFromRow(row);
-                icdCdText = icdCodeFromRow(row);
+                icdCdText = icdShortDescFromRow(row);
                 icdCdDesc = icdLongDescFromRow(row);
                 icdCode = ICDCode(icdCdId: icdCdId, icdCdText: icdCdText, icdCdDesc: icdCdDesc);
                 icdCode.save();
-                println("Saved");
+                cnt++;
+                if(cnt>=10000){
+                    break;
+                }
             }
         }
-        
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationKeys.PROCESS_COMPLETE, object: nil, userInfo: nil);
     }
     
-    
     private func orderNumberFromRow(row: NSString)->NSString{
-        
         var test = row.substringFromIndex(orderNumberRange.location);
-        
-        println(test);
-        return row.substringFromIndex(orderNumberRange.location);
+        return (row.substringFromIndex(orderNumberRange.location) as NSString).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet());
     }
     
     private func icdCodeFromRow(row: NSString)->NSString{
         return( (row.substringFromIndex(icdCodeRange.location) as NSString).substringToIndex(icdCodeRange.length-icdCodeRange.location));
-        //        var test = row.substringFromIndex(icdCodeRange.location);
-        //        println((test as NSString).substringToIndex(icdCodeRange.length-icdCodeRange.location));
-        //
-        //        println(row.substringWithRange(icdCodeRange));
-        //        return row.substringWithRange(icdCodeRange);
     }
     
     private func icdShortDescFromRow(row: NSString)->NSString{
-        return( (row.substringFromIndex(shortDescRange.location) as NSString).substringToIndex(shortDescRange.length-shortDescRange.location));
+        return( (row.substringFromIndex(shortDescRange.location) as NSString).substringToIndex(shortDescRange.length-shortDescRange.location)).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet());
         
     }
     
