@@ -47,21 +47,18 @@ public class ICDCodeParser: NSOperation{
         var icdCdText:NSString!;
         var icdCdDesc:NSString!;
         var icdRow:NSString!;
-        println("Start: \(NSDate())");
         var cnt=0;
         for row in rows{
             icdRow = row as NSString;
             if(icdRow.length>0){
                 cnt++;
                 icdCdId = icdCodeFromRow(row);
-                icdCdText = icdCodeFromRow(row);
+                icdCdText = icdShortDescFromRow(row);
                 icdCdDesc = icdLongDescFromRow(row);
                 icdCode = ICDCode(icdCdId: icdCdId, icdCdText: icdCdText, icdCdDesc: icdCdDesc);
                 icdCode.save();
             }
         }
-        println("Complete");
-        println("End: \(NSDate()), Total Processed: \(ICDCodeDataStore.instance.data.count)");
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationKeys.PROCESS_COMPLETE, object: nil, userInfo: nil);
     }
     
