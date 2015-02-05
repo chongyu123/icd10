@@ -57,6 +57,10 @@ public class ICDCodeParser: NSOperation{
                 icdCdDesc = icdLongDescFromRow(row);
                 icdCode = ICDCode(icdCdId: icdCdId, icdCdText: icdCdText, icdCdDesc: icdCdDesc);
                 icdCode.save();
+                cnt++;
+                if(cnt>=10000){
+                    break;
+                }
             }
         }
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationKeys.PROCESS_COMPLETE, object: nil, userInfo: nil);

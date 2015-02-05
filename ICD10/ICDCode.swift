@@ -70,10 +70,23 @@ public class ICDCode : NSObject{
     }
     
     class func mock(searchBy: NSString) -> [AnyObject]{
-        var filter = NSPredicate(format: "(self.icdCdText contains[c] %@)", searchBy);
-        var mocks = self.mock();
-        var mutable = NSMutableArray(array: mocks);
-        return mutable.filteredArrayUsingPredicate(filter!);
+        let filter = NSPredicate { (evaluatedObject, _) in
+            return (evaluatedObject as ICDCode).icdCdText.hasPrefix(searchBy)
+        }
+//        var filter = NSPredicate(format: "(self.icdCdText beginswith[c] %@)", searchBy);
+        var mocks:[ICDCode] = self.mock();
+        var result:[ICDCode] = [ICDCode]();
+        var then = NSDate();
+        println("Start : \(then)");
+        for icd in mocks{
+            if(icd.icdCdText.lowercaseString.hasPrefix(searchBy.lowercaseString)){
+                result.append(icd);
+            }
+        }
+//        var mutable = NSMutableArray(array: mocks);
+        var now = NSDate();
+        println("end : \(now)");
+        return result;
     }
     
     
