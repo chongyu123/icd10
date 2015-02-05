@@ -65,7 +65,7 @@ end
 
 start_time = Time.now
 # Read the file and build the look up data structure
-file = File.open("icd10cm_order_2013.txt", "r") do |file|
+file = File.open("icd-codes.txt", "r") do |file|
   while line = file.gets
     
     order_number = line[0..4]
